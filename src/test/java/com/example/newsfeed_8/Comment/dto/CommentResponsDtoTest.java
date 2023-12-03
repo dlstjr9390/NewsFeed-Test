@@ -27,12 +27,12 @@ class CommentResponsDtoTest {
 
         ObjectMapper objectMapper = new ObjectMapper();
         String commentRequestBody = "{\"content\" : \"내용테스트\"}";
-        String PostRequestBody = "{\"title\" : \"제목\", \"content\" : \"내용\", \"img\" : \"이미지주소\"}";
+        String postRequestBody = "{\"title\" : \"제목\", \"content\" : \"내용\", \"img\" : \"이미지주소\"}";
 
         //given
         Member member = new Member("bob","1234","bob@email.com","hi");
 
-        PostRequestDto postRequestDto = objectMapper.readValue(PostRequestBody,PostRequestDto.class);
+        PostRequestDto postRequestDto = objectMapper.readValue(postRequestBody,PostRequestDto.class);
         Post post = new Post(postRequestDto,member);
 
         CommentRequestDto commentRequestDto = objectMapper.readValue(commentRequestBody,CommentRequestDto.class);
