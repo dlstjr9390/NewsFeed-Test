@@ -2,4 +2,5 @@
 단위 테스트 작성
 
 # 해결하지 못한점
-H2 DB를 사용하려고 여러 설정을 변경해봤지만 안됨
+PostService 테스트에서 createPost 메서드를 테스트하려 하면 PostRepository.save가 null을 반환함
+
